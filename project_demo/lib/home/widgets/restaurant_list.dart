@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
- import 'RestaurantItem.dart';
+import 'package:project_demo/home/widgets/restaurant_item.dart';
 
 class RestaurantList extends StatelessWidget {
   const RestaurantList({super.key});

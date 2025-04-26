@@ -1,6 +1,8 @@
-import '../../models/CategoryResponse.dart';
 
- sealed class CategoryState {}
+
+ import '../../models/category_response.dart';
+
+sealed class CategoryState {}
 
 final class CategoryInitial extends CategoryState {}
 

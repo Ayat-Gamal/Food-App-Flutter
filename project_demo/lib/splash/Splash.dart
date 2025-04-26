@@ -1,16 +1,43 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:project_demo/onboarding/OnBoarding.dart';
 import 'package:project_demo/utils/app_route.dart';
 import 'package:project_demo/utils/colors.dart';
 
 import '../utils/SecurePref.dart';
 
-class Splash extends StatelessWidget {
+class Splash extends StatefulWidget {
   Splash({super.key});
 
-  SecurePref securePref = SecurePref();
+  @override
+  State<Splash> createState() => _SplashState();
+}
 
+class _SplashState extends State<Splash> {
+  SecurePref securePref = SecurePref();
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer(
+      Duration(seconds: 3),
+          () => Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Onboarding(),
+        ),
+      ),
+    );
+}
   @override
   Widget build(BuildContext context) {
+    // Timer(
+    //     Duration(seconds: 3),
+    //         () =>
+    //         Navigator.of(context).pushReplacement(MaterialPageRoute(
+    //             builder: (BuildContext context) => Onboarding())));
+
     return Scaffold(
       backgroundColor: Color(MainColor),
       body: Stack(

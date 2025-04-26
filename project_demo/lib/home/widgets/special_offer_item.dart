@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_demo/home/widgets/RestaurantList.dart';
-import 'package:project_demo/models/CategoryDetails.dart';
-import 'package:project_demo/models/MealDetails.dart';
 import 'package:project_demo/utils/app_route.dart';
+
+import '../../models/category_details.dart';
 
 class SpecialOfferItem extends StatelessWidget {
   const SpecialOfferItem({super.key, required this.category});

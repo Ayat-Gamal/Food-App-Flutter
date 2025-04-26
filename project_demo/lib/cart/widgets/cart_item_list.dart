@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_demo/cart/cubit/cart_cubit.dart';
-import 'package:project_demo/local/database_helper.dart';
 
-import '../../models/CartItem.dart';
-import 'CartItem.dart';
+import 'cart_item.dart';
 
 class CartItemList extends StatefulWidget {
   CartItemList({super.key});

@@ -1,4 +1,5 @@
-import '../../models/CategoryDetails.dart';
+
+import '../../models/category_details.dart';
 
 sealed class MealState {}
 

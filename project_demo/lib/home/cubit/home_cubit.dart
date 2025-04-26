@@ -1,16 +1,16 @@
 import 'package:bloc/bloc.dart';
-import 'package:project_demo/home/cubit/CategeoryState.dart';
-import 'package:project_demo/home/cubit/Home_state.dart';
 import 'package:project_demo/repositaory/Reposatiory.dart';
 
+import 'Home_state.dart';
+import 'category_state.dart';
 import 'meal_state.dart';
 
-class HomeCubit extends Cubit<HomeState> {
+class HomeCubit extends Cubit<homeState> {
   final Repository repo;
 
   HomeCubit(this.repo)
     : super(
-        HomeState(mealState: MealInitial(), categoryState: CategoryInitial()),
+        homeState(mealState: MealInitial(), categoryState: CategoryInitial()),
       );
 
   Future<void> getCategories() async {

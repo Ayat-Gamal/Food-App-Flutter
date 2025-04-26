@@ -3,7 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_demo/local/database_helper.dart';
 import 'package:project_demo/utils/colors.dart';
 
-import '../../models/CartItem.dart';
+import '../../models/cart_item.dart';
+
 
 class CartItemView extends StatefulWidget {
   CartItemView({super.key, required this.cartItem, required this.onDeleteItem});

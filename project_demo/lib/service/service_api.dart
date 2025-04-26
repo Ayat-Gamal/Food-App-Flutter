@@ -1,9 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:project_demo/models/CategoryResponse.dart';
-import 'package:project_demo/models/MealDetails.dart';
 import 'package:project_demo/service/api_end_point.dart';
-import '../models/CategoryDetails.dart';
+import '../models/category_details.dart';
+import '../models/category_response.dart';
+import '../models/meal_details.dart';
 
 class CategoryService {
   final _dio = Dio(

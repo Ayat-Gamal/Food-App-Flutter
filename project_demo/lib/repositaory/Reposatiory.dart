@@ -1,11 +1,10 @@
 import 'package:project_demo/local/database_helper.dart';
-import 'package:project_demo/service/ServiceApi.dart';
-
-import '../models/CartItem.dart';
-import '../models/CategoryDetails.dart';
-import '../models/CategoryResponse.dart';
-import '../models/MealDetails.dart';
 import '../models/User.dart';
+import '../models/cart_item.dart';
+import '../models/category_details.dart';
+import '../models/category_response.dart';
+import '../models/meal_details.dart';
+import '../service/service_api.dart';
 
 class Repository {
   CategoryService categoryService;

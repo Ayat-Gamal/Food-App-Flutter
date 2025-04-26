@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_demo/fooddetails/widgets/TopPartDetailsScreen.dart';
+import 'package:project_demo/fooddetails/widgets/top_part_details_screen.dart';
+import 'package:project_demo/fooddetails/widgets/topping_item_widget.dart';
 import 'package:project_demo/local/database_helper.dart';
-import 'package:project_demo/models/CartItem.dart';
-import 'package:project_demo/models/MealDetails.dart';
+
 import 'package:project_demo/utils/colors.dart';
 
-import '../service/ServiceApi.dart';
+import '../models/cart_item.dart';
+import '../models/meal_details.dart';
+import '../service/service_api.dart';
 import '../utils/app_route.dart';
-import 'widgets/ToppingItemWidget.dart';
+
 
 class FoodDetails extends StatefulWidget {
   FoodDetails({super.key, required this.mealId});

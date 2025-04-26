@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_demo/utils/app_route.dart';
-import '../../models/CategoryResponse.dart';
+
+import '../../models/category_response.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem(

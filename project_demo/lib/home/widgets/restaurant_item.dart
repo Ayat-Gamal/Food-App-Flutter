@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_demo/home/widgets/RestaurantList.dart';
+import 'package:project_demo/home/widgets/restaurant_list.dart';
 import 'package:project_demo/utils/colors.dart';
 import '../../utils/app_route.dart';
 

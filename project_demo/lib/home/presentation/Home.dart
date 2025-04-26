@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_demo/home/cubit/home_cubit.dart';
-import 'package:project_demo/home/widgets/CategroyListView.dart';
-import 'package:project_demo/home/widgets/CustomeSearchBar.dart';
-import 'package:project_demo/home/widgets/DropDownDelivery.dart';
-import 'package:project_demo/home/widgets/GradientText.dart';
-import 'package:project_demo/home/widgets/RestaurantList.dart';
-import 'package:project_demo/home/widgets/SectionHeader.dart';
-import 'package:project_demo/home/widgets/SpecialOfferList.dart';
 import 'package:project_demo/utils/SecurePref.dart';
 import 'package:project_demo/utils/app_route.dart';
-import '../../models/CategoryResponse.dart';
-import '../../signup/widgets/CustomIconButton.dart';
+
+import '../../models/category_response.dart';
+ import '../../signup/widgets/custom_icon_button.dart';
+import '../widgets/category_list_view.dart';
+import '../widgets/custom_search_bar.dart';
+import '../widgets/drop_down_delivery.dart';
+import '../widgets/gradient_text.dart';
+import '../widgets/restaurant_list.dart';
+import '../widgets/section_header.dart';
+import '../widgets/special_offer_list.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -24,11 +25,13 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   Category? category;
   SecurePref securePref = SecurePref();
-@override
+
+  @override
   void initState() {
     super.initState();
     context.read<HomeCubit>().getCategories();
   }
+
   @override
   Widget build(BuildContext context) {
     print("Name ${category?.strCategory}");

@@ -1,8 +1,8 @@
 import 'package:path/path.dart';
-import 'package:project_demo/models/CartItem.dart';
 import 'package:sqflite/sqflite.dart';
 
 import '../models/User.dart';
+import '../models/cart_item.dart';
 
 class DatabaseHelper {
   static Database? _instance;

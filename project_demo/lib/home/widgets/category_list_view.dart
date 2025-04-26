@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:project_demo/home/cubit/CategeoryState.dart';
 import 'package:project_demo/home/cubit/Home_state.dart';
 import 'package:project_demo/home/cubit/home_cubit.dart';
-import 'package:project_demo/models/CategoryResponse.dart';
-import 'package:project_demo/service/ServiceApi.dart';
-import 'CategoryItem.dart';
+import '../../models/category_response.dart';
+import '../cubit/category_state.dart';
+import 'category_item.dart';
 
 class CategoryListView extends StatefulWidget {
   const CategoryListView({super.key, required this.onCategoryTap});
@@ -28,7 +27,7 @@ class _CategoryListViewState extends State<CategoryListView> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCubit, HomeState>(
+    return BlocBuilder<HomeCubit, homeState>(
       builder: (context, state) {
         switch (state.categoryState) {
           case CategoryInitial():

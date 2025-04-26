@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_demo/home/cubit/Home_state.dart';
 import 'package:project_demo/home/cubit/home_cubit.dart';
 import 'package:project_demo/home/cubit/meal_state.dart';
-import '../../models/CategoryDetails.dart';
-import '../../service/ServiceApi.dart';
-import 'SpecialOfferItem.dart';
+import 'package:project_demo/home/widgets/special_offer_item.dart';
+import '../../models/category_details.dart';
+import '../../service/service_api.dart';
+import '../cubit/Home_state.dart';
 
 class SpecialOfferList extends StatefulWidget {
   const SpecialOfferList({super.key, required this.cat});
@@ -42,7 +42,7 @@ class _SpecialOfferListState extends State<SpecialOfferList> {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCubit, HomeState>(
+    return BlocBuilder<HomeCubit, homeState>(
       builder: (context, state) {
         switch (state.mealState) {
           case MealInitial():

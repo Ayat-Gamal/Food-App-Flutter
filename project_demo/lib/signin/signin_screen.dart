@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:project_demo/local/database_helper.dart';
 import 'package:project_demo/utils/SecurePref.dart';
-
 import '../models/User.dart';
-import '../signup/widgets/CustomIconButton.dart';
-import '../signup/widgets/CustomeTextEdit.dart';
+import '../signup/widgets/custom_icon_button.dart';
+import '../signup/widgets/custom_text_edit.dart';
 import '../utils/app_route.dart';
 import '../utils/colors.dart';
 
@@ -16,6 +15,7 @@ class SignIn extends StatelessWidget {
   TextEditingController passwordController = TextEditingController();
   DatabaseHelper databaseHelper = DatabaseHelper();
   SecurePref secureStorage = SecurePref();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

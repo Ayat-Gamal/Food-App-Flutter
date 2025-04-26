@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:project_demo/cart/cubit/cart_cubit.dart';
 import 'package:project_demo/home/presentation/Home.dart';
-import 'package:project_demo/models/CartItem.dart';
 import 'package:project_demo/onboarding/OnBoarding.dart';
 import 'package:project_demo/signin/signin_screen.dart';
 import 'package:project_demo/splash/Splash.dart';
 import 'package:project_demo/utils/app_route.dart';
 import '../cart/Cart.dart';
-import '../fooddetails/FoodDetails.dart';
+import '../fooddetails/food_details.dart';
 import '../home/cubit/home_cubit.dart';
 import '../local/database_helper.dart';
 import '../repositaory/Reposatiory.dart';
-import '../service/ServiceApi.dart';
-import '../signup/SignUp.dart';
+import '../service/service_api.dart';
+import '../signup/sign_up.dart';
 
 class RouteGenerator {
   DatabaseHelper dbHelper = DatabaseHelper();

@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:project_demo/local/database_helper.dart';
-import 'package:project_demo/signup/widgets/CustomIconButton.dart';
+import 'package:project_demo/signup/widgets/custom_icon_button.dart';
+import 'package:project_demo/signup/widgets/custom_text_edit.dart';
 import 'package:project_demo/utils/colors.dart';
 
 import '../models/User.dart';
 import '../utils/SecurePref.dart';
 import '../utils/app_route.dart';
-import 'widgets/CustomeTextEdit.dart';
 import 'widgets/SocialButtons.dart' show SocialButton;
 
 class Signup extends StatelessWidget {
