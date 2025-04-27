@@ -11,13 +11,27 @@ class SectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(title, style: TextStyle(fontSize: 24.sp, color: Colors.black, fontWeight: FontWeight.bold)),
-        SizedBox(width: 80.w),
-        Text("View All", style: TextStyle(fontSize: 16.sp, color: Color(MainColor), fontWeight: FontWeight.bold)),
 
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 24.sp,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+
+        Text(
+          "View All",
+          style: TextStyle(
+            fontSize: 16.sp,
+            color: Color(MainColor),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ],
     );
   }

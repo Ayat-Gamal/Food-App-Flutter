@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomIconButton(
-                        icon: Icons.menu,
+                        icon: Icons.shopping_cart,
                         onClick: () {
                           Navigator.pushNamed(context, AppRoute.cart_screen);
                         },
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(height: 25.h),
 
                   SectionHeader(
-                    title: "Special Offers",
+                    title: "Meals",
                     onViewClick: () {
                       Navigator.pushNamed(context, " ");
                     },
