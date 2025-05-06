@@ -4,17 +4,19 @@ import 'package:project_demo/utils/app_route.dart';
 
 import '../../models/category_details.dart';
 
-class SpecialOfferItem extends StatelessWidget {
-  const SpecialOfferItem({super.key, required this.category});
+class MealItem extends StatelessWidget {
+  const MealItem({super.key, required this.category});
 
   final Meal category;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height.h,
-      width: MediaQuery.of(context).size.width.w,
-      padding: EdgeInsets.all(16),
+      // height: MediaQuery.of(context).size.height.h,
+      // width: MediaQuery.of(context).size.width.w,
+      height: 130.h,
+      width: 330.w,
+      padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Color(0xFFFF6B57),
         borderRadius: BorderRadius.circular(20.r),
@@ -71,14 +73,19 @@ class SpecialOfferItem extends StatelessWidget {
                   "${category.strMeal}",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16.sp,
+                    fontSize: 14.sp,
+                    overflow: TextOverflow.ellipsis,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
 
                 Row(
                   children: [
-                    Icon(Icons.local_shipping, color: Colors.white70, size: 16.sp),
+                    Icon(
+                      Icons.local_shipping,
+                      color: Colors.white70,
+                      size: 16.sp,
+                    ),
                     SizedBox(width: 4.w),
                     Text(
                       "Free delivery",
@@ -86,10 +93,8 @@ class SpecialOfferItem extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 4.h),
-
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton(
                       onPressed: () {
@@ -102,21 +107,22 @@ class SpecialOfferItem extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Color(0xFFE54630),
                         foregroundColor: Color(0xFFFFFFFF),
+
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.r),
+                          borderRadius: BorderRadius.circular(20.r),
                         ),
                       ),
                       child: Text("Buy Now"),
                     ),
-                    SizedBox(width: 10.w),
-                    Text(
-                      "\$22.00",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 16.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    //the fixed size
+                    // Text(
+                    //   "\$22.00",
+                    //   style: TextStyle(
+                    //     color: Colors.white,
+                    //     fontSize: 12.sp,
+                    //     fontWeight: FontWeight.bold,
+                    //   ),
+                    // ),
                   ],
                 ),
               ],

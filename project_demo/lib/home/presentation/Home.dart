@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           Navigator.pushNamed(context, AppRoute.cart_screen);
                         },
                       ),
-                      DropDownDeliveryList(),
+              //        DropDownDeliveryList(),
                       CustomIconButton(
                         onClick: () {
                           securePref.deleteData("email");
@@ -87,21 +87,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
                   SizedBox(height: 25.h),
 
-                  SectionHeader(
-                    title: "Meals",
-                    onViewClick: () {
-                      Navigator.pushNamed(context, " ");
-                    },
+                  GestureDetector(
+                   onTap:(){
+                     Navigator.pushNamed(context, AppRoute.view_all_meals,arguments: category?.strCategory?? "Beef");
+                     },
+                    child: SectionHeader(
+                      title: "Meals",
+                    ),
                   ),
-                  SpecialOfferList(cat: category?.strCategory ?? "Beef"),
+                  MealsList(cat: category?.strCategory ?? "Beef"),
 
-                  SizedBox(height: 25.h),
+                  SizedBox(height: 30.h),
 
                   SectionHeader(
                     title: "Restaurants",
-                    onViewClick: () {
-                      // Navigate to the Restaurants screen (to be implemented)
-                    },
+
                   ),
                   RestaurantList(),
                 ],

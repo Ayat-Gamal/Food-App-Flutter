@@ -48,7 +48,7 @@ class _CategoryListViewState extends State<CategoryListView> {
                         selectedCategory = value;
                       });
                     },
-                    isSelected: selectedCategory == list[index],
+                    isSelected: selectedCategory == list[index] ,
                   );
                 },
               ),
@@ -57,9 +57,7 @@ class _CategoryListViewState extends State<CategoryListView> {
             final message = (state.categoryState as CategoryError).message;
 
             return Center(child: Text("Error: ${message}"));
-          default:
-            return Center(child: Text("Unknown state"));
-        }
+          }
       },
     );
   }

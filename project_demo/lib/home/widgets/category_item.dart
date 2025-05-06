@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:project_demo/utils/app_route.dart';
 import 'package:project_demo/utils/colors.dart';
 
 import '../../models/category_response.dart';
 
 class CategoryItem extends StatefulWidget {
-  const CategoryItem(
-      {super.key, required this.category, required this.onCategoryTap, this.isSelected = false});
+  const CategoryItem({
+    super.key,
+    required this.category,
+    required this.onCategoryTap,
+    this.isSelected = false,
+  });
 
   final Category category;
   final Function(Category) onCategoryTap;
@@ -17,7 +20,10 @@ class CategoryItem extends StatefulWidget {
   _CategoryItemState createState() => _CategoryItemState();
 }
 
+
+
 class _CategoryItemState extends State<CategoryItem> {
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -25,10 +31,7 @@ class _CategoryItemState extends State<CategoryItem> {
         widget.onCategoryTap(widget.category);
       },
       child: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 8),
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-        ),
+        decoration: BoxDecoration(shape: BoxShape.circle),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -40,21 +43,31 @@ class _CategoryItemState extends State<CategoryItem> {
                   width: 90.w,
                   decoration: BoxDecoration(
                     color: Color(SecondaryColor),
-                    borderRadius: BorderRadius.circular(60),
+                    borderRadius: BorderRadius.circular(80),
                   ),
                 ),
               ),
+
+
+
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
+
               children: [
                 ClipOval(
-                  child: Image.network(
-                    widget.category.strCategoryThumb ?? "",
-                    height: 60.h,
-                    width: 60.w,
-                    fit: BoxFit.contain,
-                    errorBuilder: (context, error, stackTrace) =>
-                        Icon(Icons.error, size: 60),
+                  child: Container(
+                    color: Colors.white,
+                    margin: EdgeInsets.all(1.0),
+
+                    child: Image.network(
+                      widget.category.strCategoryThumb ?? "",
+                      height: 60.h,
+                      width: 80.w,
+                      fit: BoxFit.contain,
+                      errorBuilder:
+                          (context, error, stackTrace) =>
+                              Icon(Icons.error, size: 60),
+                    ),
                   ),
                 ),
                 SizedBox(height: 8.h),

@@ -8,34 +8,28 @@ import '../../models/category_details.dart';
 import '../../service/service_api.dart';
 import '../cubit/Home_state.dart';
 
-class SpecialOfferList extends StatefulWidget {
-  const SpecialOfferList({super.key, required this.cat});
+class MealsList extends StatefulWidget {
+  const MealsList({super.key, required this.cat});
 
   final String cat;
 
   @override
-  State<SpecialOfferList> createState() => _SpecialOfferListState();
+  State<MealsList> createState() => _MealsListState();
 }
 
-class _SpecialOfferListState extends State<SpecialOfferList> {
+class _MealsListState extends State<MealsList> {
   late Future<List<Meal>> meals;
 
-  //   categoryService.getCategoryDetails(
-  //     widget.cat,
-  // );
   CategoryService categoryService = new CategoryService();
 @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     context.read<HomeCubit>().getCategoryMealsById(widget.cat);
-
 }
   @override
-  void didUpdateWidget(covariant SpecialOfferList oldWidget) {
+  void didUpdateWidget(covariant MealsList oldWidget) {
     super.didUpdateWidget(oldWidget);
     print("WidgetCAt ${widget.cat}");
-    //meals = categoryService.getCategoryDetails(widget.cat);
     context.read<HomeCubit>().getCategoryMealsById(widget.cat);
     // context.read<HomeCubit>().getCategories();
   }
@@ -53,14 +47,14 @@ class _SpecialOfferListState extends State<SpecialOfferList> {
           case MealSuccess():
             final list = (state.mealState as MealSuccess).mealList;
             return SizedBox(
-              height: 180.h,
-
+              height: 135.h,
+width: 330.w,
               child: ListView.separated(
                 scrollDirection: Axis.horizontal,
                 itemCount: list.length ?? 0,
                 separatorBuilder: (context, index) => SizedBox(width: 12.w),
                 itemBuilder: (context, index) {
-                  return SpecialOfferItem(category: list[index]);
+                  return MealItem(category: list[index]);
                 },
               ),
             );

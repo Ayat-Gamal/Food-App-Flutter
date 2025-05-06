@@ -7,4 +7,5 @@ class AppRoute{
   static const home_screen ="/home";
   static const cart_screen ="/cart";
   static const signIn_screen ="/signin";
+  static const view_all_meals ="/allMeals";
 }
